@@ -2,10 +2,20 @@
 
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+  
   return (
     <div className="cursor-pointer">
       {theme === "dark" && (
