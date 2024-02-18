@@ -1,5 +1,5 @@
 import { fetchTodo } from "@/actions/fetchTodo";
-import ThemeButton from "./components/ThemeSwitch";
+import ThemeSwitch from "./components/ThemeSwitch";
 import Title from "./components/Title";
 import TodoForm from "./components/Todo/TodoForm";
 import TodoList from "./components/Todo/TodoList";
@@ -33,7 +33,7 @@ export default async function Home() {
       <div className="sm:w-[768px]">
         <div className="flex justify-between items-center mb-10">
           <Title content="Todo" />
-          <ThemeButton />
+          <ThemeSwitch/>
         </div>
         <TodoForm />
         {todoList && <TodoList todoList={todoList} />}

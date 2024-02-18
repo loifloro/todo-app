@@ -12,6 +12,7 @@ export default function TodoItem({ id, title, status, props }: Todo) {
   return (
     <li
       {...props}
+      key={id}
       className={`
         flex
         items-center
